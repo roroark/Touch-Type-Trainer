@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Touch Type Tutor</title>
+    <link rel="stylesheet" href="./resources/bootstrap.min.css">
+    <link rel="stylesheet" href="./resources/add.css">
+  </head>
+  <body>
+    <div id="main_menu" class="box1 fullpage">
+      <h1 class="display-4 head1">Touch Type Tutor</h1>
+
+      <div class="bbox1">
+        <button type="button" id="b1" class="btn btn-outline-info btn-lg btn-block">Start Session</button>
+      </div>
+    </div>
+
+    <div id="hardware_detect_screen" class="box3 fullpage hidden">
+      <h1 id="hw_title" class="display-4 head1">Detecting Hardware</h1>
+      <div class="bbox3">
+        <p id="hw_sub" class="lead cen">This may take a while.</p>
+        <button type="button" id="hw_retry" class="btn btn-outline-warning btn-lg btn-block hidden">Try Again</button>
+
+      </div>
+    </div>
+
+
+    <div id="word_screen" class="fullpage hidden">
+      <div class="box2">
+        <h5 class="cen">Type the following word:</h5>
+
+        <div class="wordbox">
+          <h2 class="cen">
+            <span id="letter_done">app</span><span id="letter_current" class="text-info">l</span><span id="letter_future">e</span>
+          </h2>
+        </div>
+
+        <div class="progress">
+          <div id="prog" class="progress-bar" role="progressbar" style="width: 67.5%;"></div>
+        </div>
+        <div id="nwstat" class="container cen">
+          <small>Word <b id="cword">6</b> of <b id="mword">8</b></small>
+        </div>
+      </div>
+    </div>
+
+    <div id="session_complete_screen" class="box3 fullpage hidden">
+      <h1 class="display-4 head3">Session Complete!</h1>
+      <div class="bbox3">
+        <button type="button" id="b2" class="btn btn-outline-info btn-lg btn-block">Return to Main Menu</button>
+      </div>
+    </div>
+
+
+
+
+
+
+    <script type="text/javascript">
+      if (typeof module == "object") {
+        window.module = module;
+        module = undefined;
+      }
+    </script>
+    <script src="./resources/jquery-3.2.1.min.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      if (window.module) module = window.module;
+    </script>
+
+    <script src="./renderer.js" charset="utf-8"></script>
+  </body>
+</html>
